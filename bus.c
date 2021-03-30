@@ -5,7 +5,7 @@
 #define SWAP(type,ax,by) do{type temp=ax;ax=by;by=temp;}while(0)
 int c = 6;
 int n = 2;
-int m = 3;
+int m = 3; //いしけいしけいし
 int bus(int* arr, int target, int size)// c澗 獄什 廃企 置企 誤呪, n精 恥 昔据, m精 獄什税 呪
 {
 	int left, right, mid;
