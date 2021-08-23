@@ -1,0 +1,120 @@
+ :root{
+     --text-color: #f0f4f5;
+     --background-color:#263343;
+    --accent-color:#d49466;
+    }
+ 
+ 
+ body{
+    margin:0; /*원하지 않는 스페이싱 없애줌*/
+     font-family:'Nunito';
+} 
+a{
+    text-decoration:none;
+    color:var(--text-color);
+} 
+.navbar{
+   display:flex;    /*한줄에 하나씩이 아닌 한줄에 나란히 */
+    justify-content: space-between; 
+    align-items:center;
+    background-color: #263343;
+    padding:8px 12px;
+}
+
+.navbar__logo{
+    font-size:24px;
+    color: var(--text-color);
+}
+.navbar__logo i{
+    color:#d49466
+}
+
+.navbar__menu{
+    display:flex;
+    list-style: none;  /*list dodtdotdot 없애줌*/
+    padding-left: 0;  
+
+}
+
+.navbar__menu li{
+    padding: 8px 12px; 
+    /*margin 을 넣으면 클릭할 수 있는 범위가 작아지고 
+    padding은 박스 안에 넣기 때문에 범위도 넓어지고 더 크게 하이라이트 가능*/
+ }
+/*마우스가 올려졌을 때  */
+.navbar__menu li:hover{
+    background-color: #d49466;
+    border-radius: 4px;
+    /* 가장자리 둥굴게 */
+}
+.navbar__icons{
+     list-style: none;
+   color:var(--text-color);
+   display:flex;
+   padding-left: 0;  
+}
+
+.navbar__icons li{
+    padding: 8px 12px; 
+}
+
+.navbar__toggleBtn{
+    display:none;
+    position: absolute;
+     /* 문서 흐름에 나와서 포지션할 수 있는것 */
+     right:32px;
+     font-size: 24px;
+     color:#d49466
+}
+/* layout을 반응형으로 만들 때 media quary를 사용함 */
+@media screen and (max-width:768px){
+    .navbar{
+        flex-direction:column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar__menu{
+        display: none;
+        flex-direction:column;
+        align-items: center;
+        width:100%;
+    }
+    .navbar__menu li{
+        width:100%;
+        /*너비가 넓어지면 텍스트가 자동으로 왼쪽정렬*/
+        text-align: center;
+
+    }
+    .navbar__icons{
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar__toggleBtn{
+        display:block;
+    }
+    .navbar__menu.active,
+    .navbar__icons.active{
+        display:flex;
+    }
+}
+/*
+
+
+
+
+@media screen and (max-width: 768px){
+    .navbar {
+        flex-direction :column; 
+        align-items:flex-start;
+    }
+    .navbar__menu{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+    .navbar__menu li{
+        width:100%;
+        text-align:center;
+    }
+}  */
