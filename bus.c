@@ -11,7 +11,7 @@
 int bus(int* arr, int size)// c는 버스 한대 최대 명수, n은 총 인원, m은 버스의 수
 {
 	int left, right, mid;
-	
+	ddddddddddddddddddddddddddddddddddddddddddd
 	int mid_index,left_index=0,right_index=size-1;
 	left = arr[left_index];
 	right = arr[right_index];
